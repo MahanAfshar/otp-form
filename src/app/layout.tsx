@@ -8,7 +8,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "otp-form task",
+  title: "otp-form",
   description: "otp-form task for dubz company",
 };
 

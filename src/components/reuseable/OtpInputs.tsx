@@ -30,7 +30,7 @@ export default function OtpInputs({
     };
 
     const clickHandler = (index: number) => {
-        refInputs.current[index]?.setSelectionRange(1, 1);
+        refInputs.current[index]?.select();
     };
 
     return (
@@ -38,7 +38,7 @@ export default function OtpInputs({
             {otp.map((value, index) => (
                 <input
                     key={index}
-                    type="text"
+                    type="number"
                     value={value}
                     autoFocus={index == 0}
                     className={`w-1/5 border border-black/50 rounded-xl text-center p-4 text-4xl selection:bg-transparent ${className}`}

@@ -103,14 +103,14 @@ export default function LoginPage() {
             >
               <span className="pr-4 border-r border-black/50">+98</span>
               <input
-                type="tel"
+                type="number"
                 placeholder="000 000 0000"
                 className="text-black/50 placeholder:text-black/50 outline-none border-none pl-4 w-full"
                 value={phoneNumber}
-                maxLength={10}
                 onChange={(e) => {
                   setIsValid(true);
                   const value = e.target.value;
+                  if (value.length > 10) return;
                   setPhoneNumber(value);
                   if (value.length >= 3) {
                     const validNumber = /^9[0 | 1 | 2 | 3 | 9]\d+$/g.test(value);
